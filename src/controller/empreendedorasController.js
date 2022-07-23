@@ -64,7 +64,7 @@ const getEmpreendedorasPorLocalidade = async (req, res) => {
         return res.status(403).send("erro de autentificação")
       }
       const { bairro } = req.query
-      const findEmpreendedoras = await empreendedorasModel.find({bairro: bairro})
+      const findEmpreendedoras = await empreendedorasModel.find({ bairro: bairro })
       if (findEmpreendedoras == null) {
         return res.status(404).json({ message: "nenhum endereco foi encontrado" })
       }
@@ -81,18 +81,17 @@ const updateEmpreendedoras = async (req, res) => {
     if (!authHeader) {
       return res.status(401).send('where is the authorization?')
     }
-
     const token = authHeader.split(' ')[1]
     await jwt.verify(token, SECRET, async function (erro) {
       if (erro) {
         return res.status(403).send('Voce nao tem autorizacao para acessar isso')
       }
       const { name, telefone, endereco, bairro, categoria } = req.body
-      const updatedEmpreendedora = await empreendedorasModel
-        .findByIdAndUpdate(req.params.id, {
-          name, telefone, endereco, categoria, bairro
-        })
-      res.status(200).json(updatedEmpreendedora)
+      await empreendedorasModel.findByIdAndUpdate(req.params.id, {
+        name, telefone, endereco, categoria, bairro
+      })
+      const updatedEmpreendedoras = await empreendedorasModel.findById(req.params.id)
+      res.status(200).json(updatedEmpreendedoras)
 
     })
 
