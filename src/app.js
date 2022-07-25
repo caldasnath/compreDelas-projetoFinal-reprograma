@@ -12,7 +12,7 @@ const usersRoutes = require("./routes/usersRoutes");
 app.use(express.json())
 app.use(cors())
 db.connect()
-app.use('/minha-rota-de-documentacao/', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use('/compre-delas/', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use("/", empreendedorasRoutes);
 app.use("/users", usersRoutes);
 
