@@ -1,10 +1,16 @@
-# Compre Delas
+# Compre Delas 👩‍💻👩‍🏭👩‍🔧👩‍🍳
+
+# Projeto final - {reprograma}
+
+Projeto de conclusão do  bootcamp de Back-end da reprogram.
 
 # Introdução
 
 Além das perdas humanas, a pandemia trouxe também mais instabilidade econômica e aprofundamento da desigualdade social e de gênero no país. A ideia do 'Compre Delas' surgiu no momento da organização da festa de 2 anos do meu filho. Durante o processo, conheci muitas fornecedoras que - assim como eu - perderam seus empregos formais na pandemia e precisaram se reinventar, buscando alternativas pra sustentar suas famílias.
 
 # Objetivo
+
+:
 
 **Compre Delas** é uma API com o objetivo de reunir e promover negócios, produtos ou serviços ofertados/prestados por mulheres que perderam sua fonte de renda devido a pandemia de covid-19.
 
@@ -13,7 +19,7 @@ Além das perdas humanas, a pandemia trouxe também mais instabilidade econômic
 - JavaScript/NodeJS
 - Mongo DB
 
-## Pacotes utilizados
+## *Pacotes utilizados*
 
 - express
 - cors
@@ -43,20 +49,17 @@ $ npm start
 
 # Rotas/Endpoints
 
-## Rotas de usuários
+## *Rotas de usuários*
 
 | Rotas  | Descrição  |
-| ------ | ---------- |
+| --- | --- |
 | POST/user/ | Cadastro de usuário |
 | POST/user/login | Login de usuário |
 
-</br>
-
-
-## Rotas de empreendedoras
+## *Rotas de empreendedoras*
 
 | Rotas | Descrição |
-| ----- | --------- |
+| --- | --- |
 | POST/cadastro | Cadastro de perfil da empreendedora |
 | GET/empreendedoras | Lista todos perfis das empreendedoras |
 | GET/categoria | Lista os perfis das empreendedoras filtrado por categoria |
@@ -65,9 +68,4 @@ $ npm start
 | PATCH/telefone/:id | Altera o campo de telefone da empreendedora |
 | DELETE/:id | Deleta perfil da empreendedora |
 
-</br>
-</br>
-</br>
-</br>
-
-<p align="left"> Desenvolvido por <a href="[https://www.linkedin.com/in/nathalia-caldas/](https://www.linkedin.com/in/nathalia-caldas/)" target="_blank"><img src="https://img.shields.io/badge/-Nathalia_Caldas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=[https://www.linkedin.com/in/nathalia-caldas/](https://www.linkedin.com/in/nathalia-caldas/)" target="_blank"></a> </p>
+<p align="center"> Desenvolvido por <a href="[https://www.linkedin.com/in/nathalia-caldas/](https://www.linkedin.com/in/nathalia-caldas/)" target="_blank"><img src="https://img.shields.io/badge/-Nathalia_Caldas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=[https://www.linkedin.com/in/nathalia-caldas/](https://www.linkedin.com/in/nathalia-caldas/)" target="_blank"></a> </p>
