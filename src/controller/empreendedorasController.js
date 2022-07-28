@@ -114,10 +114,10 @@ const updateTelefoneEmpreendedoras = async (req, res) => {
         return res.status(403).send('Voce nao tem autorizacao para acessar isso')
       }
       const { telefone } = req.body
-      const updatedTelefoneEmpreendedoras = await empreendedorasModel
-        .findByIdAndUpdate(req.params.id, {
-          telefone
-        })
+      await empreendedorasModel.findByIdAndUpdate(req.params.id, {
+        telefone
+      })
+      const updatedTelefoneEmpreendedoras = await empreendedorasModel.findById(req.params.id)
       res.status(200).json(updatedTelefoneEmpreendedoras)
 
     })
