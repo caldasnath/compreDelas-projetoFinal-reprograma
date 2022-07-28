@@ -17,6 +17,8 @@ Além das perdas humanas, a pandemia trouxe também mais instabilidade econômic
 
 **Compre Delas** é uma API com o objetivo de reunir e promover negócios, produtos ou serviços ofertados/prestados por mulheres que perderam sua fonte de renda devido a pandemia de covid-19.
 
+Acesse a aplicação [aqui](https://compre-delas.herokuapp.com/) 
+Acesse a documentação [aqui](https://compre-delas.herokuapp.com/compre-delas/)
 
 ## Linguagem e banco de dados utilizados
 
