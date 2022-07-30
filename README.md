@@ -80,4 +80,7 @@ $ npm start
 <br>
 <br>
 
-<p align="center"> Desenvolvido por <a href="[https://www.linkedin.com/in/nathalia-caldas/](https://www.linkedin.com/in/nathalia-caldas/)" target="_blank"><img src="https://img.shields.io/badge/-Nathalia_Caldas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=[https://www.linkedin.com/in/nathalia-caldas/](https://www.linkedin.com/in/nathalia-caldas/)" target="_blank"></a> </p>
+
+
+<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/nathalia-caldas" target="_blank"><img src="https://img.shields.io/badge/-Nathalia_Caldas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/nathalia-caldas"></a> </p>
+
