@@ -22,16 +22,16 @@ const create = (req, res) => {
 const login = (req, res) => {
   users.findOne({ email: req.body.email }, function (error, user) {
     if (error) {
-      return res.status(500).send({ message: "message invalid authorization" })
+      return res.status(500).send({ message: "mensagem de autorização inválida" })
     }
     if (!user) {
-      res.status(404).send(`There is no user with this email: ${req.body.email}`)
+      res.status(404).send(`Não há usuário com este e-mail: ${req.body.email}`)
     }
 
     const senhaValida = bcrypt.compareSync(req.body.senha, user.senha)
 
     if (!senhaValida) {
-      res.status(403).send('Invalid password')
+      res.status(403).send('Senha inválida')
     }
 
     const token = jwt.sign({ email: req.body.email }, SECRET)
