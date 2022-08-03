@@ -7,13 +7,13 @@ const getAllEmpreendedoras = async (req, res) => {
   try {
     const authHeader = req.get('authorization')
     if (!authHeader) {
-      return res.status(401).send('where is the authorization?')
+      return res.status(401).send('onde está autorização?')
     }
 
     const token = authHeader.split(' ')[1]
     await jwt.verify(token, SECRET, async function (erro) {
       if (erro) {
-        return res.status(403).send("Voce nao tem autorizacao para acessar isso")
+        return res.status(403).send("Voce não tem autorização para acessar isso")
       }
       const allEmpreendedoras = await empreendedorasModel.find()
       res.status(200).json(allEmpreendedoras)
@@ -32,12 +32,12 @@ const getEmpreendedorasPorCategoria = async (req, res) => {
     const authHeader = req.get('authorization')
 
     if (!authHeader) {
-      return res.status(401).json({ message: "Você precisa estar logado para editar um post!" })
+      return res.status(401).json({ message: "Você precisa estar logado para editar o post!" })
     }
     const token = authHeader.split(" ")[1]
     await jwt.verify(token, SECRET, async function (erro) {
       if (erro) {
-        return res.status(403).send("erro de autentificação")
+        return res.status(403).send("erro de autenticação")
       }
       const { categoria } = req.query
       const findEmpreendedoras = await empreendedorasModel.find({ categoria: categoria })
@@ -56,12 +56,12 @@ const getEmpreendedorasPorLocalidade = async (req, res) => {
     const authHeader = req.get('authorization')
 
     if (!authHeader) {
-      return res.status(401).json({ message: "Você precisa estar logado para editar um post!" })
+      return res.status(401).json({ message: "Você precisa estar logado para editar o post!" })
     }
     const token = authHeader.split(" ")[1]
     await jwt.verify(token, SECRET, async function (erro) {
       if (erro) {
-        return res.status(403).send("erro de autentificação")
+        return res.status(403).send("erro de autenticação")
       }
       const { bairro } = req.query
       const findEmpreendedoras = await empreendedorasModel.find({ bairro: bairro })
@@ -79,12 +79,12 @@ const updateEmpreendedoras = async (req, res) => {
   try {
     const authHeader = req.get('authorization')
     if (!authHeader) {
-      return res.status(401).send('where is the authorization?')
+      return res.status(401).send('Onde está a autorização?')
     }
     const token = authHeader.split(' ')[1]
     await jwt.verify(token, SECRET, async function (erro) {
       if (erro) {
-        return res.status(403).send('Voce nao tem autorizacao para acessar isso')
+        return res.status(403).send('Voce não tem autorização para acessar isso')
       }
       const { name, telefone, endereco, bairro, categoria } = req.body
       await empreendedorasModel.findByIdAndUpdate(req.params.id, {
@@ -105,13 +105,13 @@ const updateTelefoneEmpreendedoras = async (req, res) => {
   try {
     const authHeader = req.get('authorization')
     if (!authHeader) {
-      return res.status(401).send('where is the authorization?')
+      return res.status(401).send('onde está a autorização?')
     }
 
     const token = authHeader.split(' ')[1]
     await jwt.verify(token, SECRET, async function (erro) {
       if (erro) {
-        return res.status(403).send('Voce nao tem autorizacao para acessar isso')
+        return res.status(403).send('Voce não tem autorizção para acessar isso')
       }
       const { telefone } = req.body
       await empreendedorasModel.findByIdAndUpdate(req.params.id, {
@@ -132,13 +132,13 @@ const createEmpreendedoras = async (req, res) => {
   try {
     const authHeader = req.get('authorization')
     if (!authHeader) {
-      return res.status(401).send('where is the authorization?')
+      return res.status(401).send('onde está a autorização?')
     }
 
     const token = authHeader.split(' ')[1]
     await jwt.verify(token, SECRET, async function (erro) {
       if (erro) {
-        return res.status(403).send('Sorry, you are not authorized to access this')
+        return res.status(403).send('Você não está autorizado a acessar isso!')
       }
 
       const { name, telefone, endereco, bairro, categoria } = req.body
@@ -161,13 +161,13 @@ const deleteEmpreendedoras = async (req, res) => {
   try {
     const authHeader = req.get('authorization')
     if (!authHeader) {
-      return res.status(401).send('where is the authorization?')
+      return res.status(401).send('onde está a autorização')
     }
 
     const token = authHeader.split(' ')[1]
     await jwt.verify(token, SECRET, async function (erro) {
       if (erro) {
-        return res.status(403).send('Voce nao tem autorizacao para acessar isso')
+        return res.status(403).send('Voce não tem autorização para acessar isso')
       }
       const { id } = req.params
       await empreendedorasModel.findByIdAndDelete(id)
